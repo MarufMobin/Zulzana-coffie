@@ -1,0 +1,29 @@
+.title h3{
+    font-size: 64px;
+    width: 70%;
+    margin: 0px auto;
+
+}
+.title p{
+    font-size: 20px;
+    width: 70%;
+    margin: 0px auto;
+}
+.title{
+    margin-bottom: 500px;
+     text-align: right;
+}
+/* .custm-carusal{
+    background: url("../../../images/herobgone.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+.carousel-indicators{
+    margin-bottom: 300px;
+}
+.carousel-indicators [data-bs-target],.carousel-indicators .active{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}

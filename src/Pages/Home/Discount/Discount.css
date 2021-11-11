@@ -1,0 +1,21 @@
+.discount-section{
+    background: url('../../../images/footer-bg.jpg');
+  
+    color: #fff;
+}
+.discount-btn{
+    background-color: #faf9f9;
+    color: rgb(2, 2, 2);
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 2px solid #f8f6f6;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .3s;
+}
+.discount-btn:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.055);
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}

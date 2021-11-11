@@ -1,0 +1,5 @@
+.custom-hover:hover{
+    transition: .3s;
+    opacity: .6;
+    cursor: pointer;
+}
