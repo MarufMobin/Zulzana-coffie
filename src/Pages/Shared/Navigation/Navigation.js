@@ -1,16 +1,38 @@
 import React from 'react';
-import { Container, Nav,Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
+import useAuth from '../../../Hooks/useAuth';
+import './Navigation.css'
+
 
 const Navigation = () => {
+    const {user,logOutUser} = useAuth()
+console.log(user)
     return (
-        <Navbar collapseOnSelect expand="lg" sticky="top" variant="dark" style={{padding: "20px 0px", backgroundColor: "#141414", color: "#fff"}}>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home" style={{fontSize: "18px",fontFamily: "cursive",fontSize: "22px"}}>ZulzanaCoffie</Navbar.Brand>
-                <Nav className="ms-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
-                </Nav>
+                <Navbar.Brand to="/" style={{color: "#fff", fontFamily: "cursive", fontSize:"24px", fontWeight:"600"}}>ZulzanaCoffie</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="ms-auto">
+                        <Nav.Link as={HashLink}  to="/home">home</Nav.Link>
+                       <Nav.Link  as={HashLink} to="/about">about</Nav.Link>
+                        <Nav.Link as={HashLink}  to="/contact">contact</Nav.Link>
+                        <Nav.Link as={HashLink}  to="/allproduct">allproduct</Nav.Link>
+                        {
+                            user?.email ? 
+                            
+                            <Button onClick={logOutUser}>Log Out</Button>
+                            :
+                            <Nav.Link as={HashLink}  to="/login">Login</Nav.Link>
+                        }
+                        <span style={{color: "#fff", fontSize: "18px", lineHeight:"42px",letterSpacing:"1.2px", marginLeft:"20px"}}>{
+                            user.email
+                        }</span>
+
+                        
+                    </Nav>
+                </Navbar.Collapse>
             </Container>
         </Navbar>
     );

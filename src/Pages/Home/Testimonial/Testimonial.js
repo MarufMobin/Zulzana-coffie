@@ -5,7 +5,7 @@ import './Testimonial.css'
 const Testimonial = ({ testimonial }) => {
 
     const { id, url, name, description, designation, ratting,imgUrl } = testimonial
-    console.log(testimonial)
+    // console.log(testimonial)
     return (
         <>
             <div>

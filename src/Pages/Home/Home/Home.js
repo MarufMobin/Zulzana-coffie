@@ -21,7 +21,6 @@ const Home = () => {
             <Speclalist></Speclalist>
             <Brands></Brands>
             <Footer></Footer>
-            
         </div>
     );
 };

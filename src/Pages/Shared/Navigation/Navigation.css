@@ -1,0 +1,9 @@
+.navbar-dark .navbar-nav .nav-link.active{
+   text-decoration: underline;
+   color: #c6baba;
+}
+.navbar-dark .navbar-nav .nav-link{
+    color: #fff;
+    text-align: left;
+    font-size: 18px;
+}
