@@ -1,9 +1,12 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const SingleProduc = ({product}) => {
     const { id, description, name, categories, sku, tag, img } = product;
-    console.log(product)
+    const submition = (id) =>{
+        console.log("click", id)
+    }
     return (
         <Col xs={6} xs lg="4" md={4}>
             <div className="mt-4 shadow-lg">
@@ -14,7 +17,7 @@ const SingleProduc = ({product}) => {
                         <Card.Text>
                             {description.slice(0, 80)}
                         </Card.Text>
-                        <Button variant="primary" className="custom-button">Go somewhere</Button>
+                        <Button variant="primary" className="custom-button" onClick={ ()=> submition(id) }>Godfdsfs    somewhere</Button>
                     </Card.Body>
                 </Card>
             </div>
