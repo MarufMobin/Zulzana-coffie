@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './Product.css'
 
 const Product = ({ product}) => {
-    const { id,description,name,categories,sku,tag,img } = product;
+    const { _id,description,name,categories,sku,tag,img } = product;
    const submition = id =>{
        console.log(id)
     //    fetch(``)
@@ -20,7 +20,7 @@ const Product = ({ product}) => {
                         <Card.Text>
                             {description.slice(0,80)}
                         </Card.Text>
-                        <Link to={`/allproducts/${id}`} > <button className="custom-button">Buy Now</button> </Link>
+                        <Link to={`/allproducts/${_id}`} > <button className="custom-button">Buy Now</button> </Link>
                     </Card.Body>
                 </Card>
             </div>

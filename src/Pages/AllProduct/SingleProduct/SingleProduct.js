@@ -3,7 +3,7 @@ import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const SingleProduc = ({product}) => {
-    const { id, description, name, price ,categories, sku, tag, img } = product;
+    const { _id, description, name ,categories, img } = product;
     console.log(product)
     
     return (
@@ -17,7 +17,7 @@ const SingleProduc = ({product}) => {
                             {description.slice(0, 80)}
                             catagory : {categories}
                         </Card.Text>
-                        <Link to={`/allproducts/${id}`} > <button className="custom-button">Buy Now</button> </Link>
+                        <Link to={`/allproducts/${_id}`} > <button className="custom-button">Buy Now</button> </Link>
                     </Card.Body>
                 </Card>
             </div>

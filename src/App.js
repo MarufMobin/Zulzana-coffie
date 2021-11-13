@@ -14,6 +14,7 @@ import AllProducts from './Pages/AllProduct/AllProducts/AllProducts';
 import PrivateRoute from './contexts/PrivateRoute/PrivateRoute';
 import ProductSell from './Pages/ProductSell/ProductSell';
 import Checkout from './Pages/Checkout/Checkout';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 function App() {
   return (
     <div className="App">
@@ -44,16 +45,19 @@ function App() {
               <Contact></Contact>
             </Route>
 
-            <Route path="/allproducts/:servicesId">
+            <PrivateRoute path="/allproducts/:servicesId">
               <ProductSell></ProductSell>
-            </Route>
+            </PrivateRoute>
 
-            <Route exact path="/allproduct">
+            <PrivateRoute exact path="/allproduct">
               <AllProducts></AllProducts>
-            </Route>
+            </PrivateRoute>
 
             <Route exact path="/checkout">
               <Checkout></Checkout>
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard></Dashboard>
             </Route>
 
             <Route path="*">
