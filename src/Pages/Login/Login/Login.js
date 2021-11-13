@@ -18,9 +18,9 @@ const Login = () => {
     const onSubmit = data => setLoginData(data);
     const loginRelated = logInUser(loginData.email, loginData.password , history, location)
 
-        if(loginRelated){
-            alert("successFull Login")
-        }
+        // if(loginRelated){
+        //     alert("successFull Login")
+        // }
 
     return (
         <Container className="intro mt-5 pt-5">

@@ -13,14 +13,8 @@
     margin-bottom: 500px;
      text-align: right;
 }
-/* .custm-carusal{
-    background: url("../../../images/herobgone.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
 .carousel-indicators{
-    margin-bottom: 300px;
+    margin-bottom: 250px;
 }
 .carousel-indicators [data-bs-target],.carousel-indicators .active{
     width: 20px;

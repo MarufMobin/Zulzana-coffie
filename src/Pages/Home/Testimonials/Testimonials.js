@@ -8,7 +8,7 @@ const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([])
 
     useEffect(() => {
-        fetch('/fakeTestimonial.json')
+        fetch('http://localhost:5000/testimonial')
             .then(res => res.json())
             .then(data => setTestimonials(data))
     }, [])

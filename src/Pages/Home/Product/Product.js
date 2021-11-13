@@ -1,6 +1,7 @@
 import Button from '@restart/ui/esm/Button';
 import React, { useEffect } from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Product.css'
 
 const Product = ({ product}) => {
@@ -19,7 +20,7 @@ const Product = ({ product}) => {
                         <Card.Text>
                             {description.slice(0,80)}
                         </Card.Text>
-                        <Button variant="primary" onClick={()=> submition(id)} className="custom-button">Go somewhere</Button>
+                        <Link to={`/allproducts/${id}`} > <button className="custom-button">Buy Now</button> </Link>
                     </Card.Body>
                 </Card>
             </div>

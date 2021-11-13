@@ -1,0 +1,16 @@
+.custom-sec-btn {
+    background-color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: rgb(115, 173, 221);
+    font-weight: 600;
+    display: inline-block;
+}
+.custom-sec-btn:hover {
+        color: #fff;
+        border: 2px solid #fff;
+        background-color: transparent;
+}

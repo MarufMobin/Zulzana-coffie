@@ -9,7 +9,7 @@ const Navigation = () => {
     const {user,logOutUser} = useAuth()
 console.log(user)
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand to="/" style={{color: "#fff", fontFamily: "cursive", fontSize:"24px", fontWeight:"600"}}>ZulzanaCoffie</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
