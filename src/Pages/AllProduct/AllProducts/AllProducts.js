@@ -9,7 +9,7 @@ const AllProducts = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://fast-fjord-39007.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
@@ -41,20 +41,3 @@ const AllProducts = () => {
 };
 
 export default AllProducts;
-
-// const[products, setProducts]  = useState({})
-
-//         useEffect(() =>{
-//             fetch('http://localhost:5000/products')
-//             .then( res => res.json())
-//             .then( data => setProducts(data))
-//         },[])
-//     return (
-//         <>
-//             <Navigation></Navigation>
-//                 Total Products{
-//                     products?.length
-//                 }
-//             <Footer></Footer>
-//         </>
-//     );

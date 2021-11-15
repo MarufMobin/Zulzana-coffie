@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Alert, Button, Col, Container, Row, Spinner } from 'react-bootstrap';
-import { useForm } from "react-hook-form";
 import { useHistory, useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
@@ -13,7 +12,7 @@ const Login = () => {
     const location = useLocation()
 
     const [loginData, setLoginData] = useState({})
-    const { logInUser, isLoading, user } = useAuth()
+    const { logInUser, isLoading, user,userGoogleSign } = useAuth()
 
 
     const onFieldChange = e => {
@@ -22,6 +21,11 @@ const Login = () => {
         const newLoginData = { ...loginData }
         newLoginData[field] = value;
         setLoginData(newLoginData)
+    }
+
+    // google login 
+    const googleSignIn = () =>{
+        userGoogleSign(location, history)
     }
 
     const onSubmitionForm = e => {
@@ -47,7 +51,9 @@ const Login = () => {
                                 <input type="password" className="p-2 w-100" placeholder="Enter Your Password" name="password" onBlur={onFieldChange} />
                                 <br />
                                 <br />
-                                <input className="cus-btn d-inline" type="submit" value="Login" />
+                                <input className=" d-inline custom-button" type="submit" value="Login" />
+
+                                <input className="ms-2 d-inline custom-button" type="submit" value="google Sign In" onClick={googleSignIn}  />
                             </form>
                         }
                         <NavLink

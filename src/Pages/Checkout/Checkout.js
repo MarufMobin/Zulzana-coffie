@@ -1,4 +1,6 @@
+import { Button } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import done from '../../images/congrats-1.gif'
 import Footer from '../Shared/Footer/Footer';
 import Navigation from '../Shared/Navigation/Navigation';
@@ -27,6 +29,7 @@ const Checkout = () => {
                                 transdermal patch includes a backing sheet, impermeable to the active substance and normally
                                 impermeable to water. The releasing surface.
                             </p>
+                            <Link className="custom-button mt-2" style={{textDecoration:"none", display:"inline-block"}} to="/dashboard/myorders">View Orders</Link>
                         </div>
                     </div>
                 </div>

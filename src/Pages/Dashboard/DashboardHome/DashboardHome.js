@@ -4,7 +4,7 @@ import useAuth from '../../../Hooks/useAuth';
 
 const DashboardHome = () => {
     const {user} = useAuth()
-    return (<h1>WelCome To Dashboard {user?.email}</h1>
+    return (<h1>WelCome To {user?.displayName}</h1>
     );
 };
 

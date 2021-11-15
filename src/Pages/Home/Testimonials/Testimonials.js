@@ -8,7 +8,7 @@ const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/testimonial')
+        fetch('https://fast-fjord-39007.herokuapp.com/testimonial')
             .then(res => res.json())
             .then(data => setTestimonials(data))
     }, [])
@@ -30,7 +30,7 @@ const Testimonials = () => {
 
                             {
 
-                                testimonials.slice(0,9).map(testimonial => <Testimonial testimonial={testimonial} key={testimonial.id}></Testimonial>)
+                                testimonials.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial.id}></Testimonial>)
                             }
 
                         </Slider>

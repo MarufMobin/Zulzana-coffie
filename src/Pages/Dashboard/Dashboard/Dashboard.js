@@ -22,11 +22,14 @@ import Myorders from '../Myorders/Myorders';
 import Payments from '../Payments/Payments';
 import UploadTestimonial from '../UploadTestimonial/UploadTestimonial';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import useAuth from '../../../Hooks/useAuth';
+import AllOrders from '../AllOrders/Allorders/AllOrders';
 
 const drawerWidth = 240;
 
 export default function Dashboard() {
     let { path, url } = useRouteMatch();
+    const {user} = useAuth()
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
@@ -36,7 +39,7 @@ export default function Dashboard() {
             >
                 <Toolbar>
                     <Typography variant="h6" noWrap component="div">
-                        Permanent drawer
+                        {user?.displayName}
                         <Link className=" text-dark ms-5 " to="/home"> Back </Link>
                     </Typography>
                 </Toolbar>
@@ -90,6 +93,14 @@ export default function Dashboard() {
                     </ListItem>
                 </List>
                 <Divider />
+                <Divider />
+                <List>
+                    <ListItem button>
+                        <Link className="dashboard-btn fw-bold" to={`${url}/allorders`}> <i class="fas fa-money-check-alt"></i>All Orders</Link>
+
+                    </ListItem>
+                </List>
+                <Divider />
 
 
             </Drawer>
@@ -116,6 +127,9 @@ export default function Dashboard() {
                     </Route>
                     <Route path={`${path}/uploadatestimonial`}>
                         <UploadTestimonial></UploadTestimonial>
+                    </Route>
+                    <Route path={`${path}/allorders`}>
+                        <AllOrders></AllOrders>
                     </Route>
                     
                 </Switch>

@@ -56,6 +56,7 @@ function App() {
             <Route exact path="/checkout">
               <Checkout></Checkout>
             </Route>
+            
             <Route path="/dashboard">
               <Dashboard></Dashboard>
             </Route>

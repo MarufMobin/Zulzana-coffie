@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const SingleProduc = ({product}) => {
     const { _id, description, name ,categories, img } = product;
-    console.log(product)
+    
     
     return (
         <Col xs={6} xs lg="4" md={4}>
@@ -17,8 +17,8 @@ const SingleProduc = ({product}) => {
                             {description.slice(0, 80)}
                             catagory : {categories}
                         </Card.Text>
-                        <Link to={`/allproducts/${_id}`} > <button className="custom-button">Buy Now</button> </Link>
-                    </Card.Body>
+                      </Card.Body>
+                      <Link to={`/allproducts/${_id}`} > <button className="custom-button">Buy Now</button> </Link>
                 </Card>
             </div>
         </Col>

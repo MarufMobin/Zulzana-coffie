@@ -14,7 +14,7 @@ const ProductSell = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://fast-fjord-39007.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setServicesDetails(data))
     }, [servicesId])
@@ -24,12 +24,13 @@ const ProductSell = () => {
     const productData = {
         email: user?.email,
         id: servicesId,
+        status: "pandding",
         img: foundDetails?.img
     }
-    // console.log("jabar bhai", productData)
+    
     const placeItemBtn = () => {
 
-        fetch(`http://localhost:5000/allproducts`, {
+        fetch(`https://fast-fjord-39007.herokuapp.com/allproducts`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(productData)

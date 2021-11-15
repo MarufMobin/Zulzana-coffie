@@ -5,11 +5,11 @@ import './Testimonial.css'
 const Testimonial = ({ testimonial }) => {
 
     const { id, url, name, description, designation, ratting,imgUrl } = testimonial
-    // console.log(testimonial)
     return (
         <>
             <div>
-                <img src={imgUrl} alt="" style={{display: "block", margin: "30px auto",borderRadius: "50%"}} />
+            <img src={imgUrl} alt="" style={{display: "block", margin: "30px auto",borderRadius: "50%"}} />
+
                 <span> {
                     name
                 }</span>

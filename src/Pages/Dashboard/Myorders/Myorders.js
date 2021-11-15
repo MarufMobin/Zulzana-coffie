@@ -8,7 +8,7 @@ const Myorders = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/allorders')
+        fetch('https://fast-fjord-39007.herokuapp.com/allorders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -33,7 +33,7 @@ const Myorders = () => {
                         <tbody>
                             
                                 {
-                                    orderProducts.map((orderProduct) => <Order  key={orderProduct.id} orderProduct={orderProduct}></Order>)
+                                    orderProducts.map((orderProduct, index) => <Order index={index} key={index}  orderProduct={orderProduct}></Order>)
                                 }
                            
 

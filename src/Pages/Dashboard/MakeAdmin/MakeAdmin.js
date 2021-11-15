@@ -12,7 +12,21 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const user = { email };
-       
+        fetch(`https://fast-fjord-39007.herokuapp.com/users`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    console.log(data);
+                    setSuccess(true);
+                }
+            })
+          
         e.preventDefault()
     }
     return (
